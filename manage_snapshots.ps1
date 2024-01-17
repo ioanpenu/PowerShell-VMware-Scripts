@@ -1,3 +1,10 @@
+#Date of Creation: 25.12.2023
+#Last Modified: 17.01.2024
+#Author: Ioan Penu 
+#Contact ioanpenu@gmail.com | www.it-react.com 
+#Description: Interacts with snapshots on VMware vCenter
+#Version: 1.5
+
 # Import the VMware PowerCLI module
 Import-Module VMware.PowerCLI
 
