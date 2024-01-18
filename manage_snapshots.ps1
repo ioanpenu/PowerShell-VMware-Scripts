@@ -8,7 +8,7 @@
 # Import the VMware PowerCLI module
 Import-Module VMware.PowerCLI
 
-# Function to login to vCenter - works
+# Function to login to vCenter
 function Login-VCenter {
     $vcServer = Read-Host "Enter vCenter server"
     $credential = Get-Credential -Message "Enter your vCenter credentials"
@@ -29,7 +29,7 @@ function Login-VCenter {
 # Automatically log in to vCenter
 Login-VCenter
 
-# Function to list snapshots with numbers  - works
+# Function to list snapshots with numbers
 function List-Snapshots-Numbered {
     $snapshots = Get-VM | Get-Snapshot
 
@@ -43,7 +43,7 @@ function List-Snapshots-Numbered {
     }
 }
 
-# Function to create a snapshot  - works
+# Function to create a snapshot
 function Create-Snapshot {
     $vmName = Read-Host "Enter the name of the VM"
     $vm = Get-VM -Name $vmName
@@ -65,7 +65,7 @@ function Create-Snapshot {
     }
 }
 
-# Function to restore a snapshot by number - works
+# Function to restore a snapshot by number
 function Restore-Snapshot-By-Number {
     $snapshots = Get-VM | Get-Snapshot
 
@@ -92,7 +92,7 @@ function Restore-Snapshot-By-Number {
     }
 }
 
-# Function to delete a snapshot by number  - works
+# Function to delete a snapshot by number
 function Delete-Snapshot-By-Number {
     List-Snapshots-Numbered
     $snapshotNumber = Read-Host "Enter the number of the snapshot to delete"
@@ -123,7 +123,7 @@ function Delete-Snapshot-By-Number {
     }
 }
 
-# Function to export snapshots to a file  - works
+# Function to export snapshots to a file
 function Export-Snapshots {
     $snapshots = Get-VM | Get-Snapshot
 
