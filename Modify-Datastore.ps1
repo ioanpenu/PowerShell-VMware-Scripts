@@ -15,8 +15,8 @@ foreach ($datacenter in $datacenters) {
     $datastores = Get-Datastore -Location $datacenter
 
     foreach ($datastore in $datastores) {
-        # Check if the datastore name matches the pattern "ISO-XXXNN-NEU"
-        if ($datastore.Name -match "^ISO-[A-Z]{3}\d{2}-NEU$") {
+        # Check if the datastore name matches the pattern "ISO-XXXNN-NEW"
+        if ($datastore.Name -match "^ISO-[A-Z]{3}\d{2}-NEW$") {
             # Construct the new datastore name
             $newDatastoreName = "ISO-ANSIBLE-$shortName"
 
