@@ -1,7 +1,7 @@
 # Define variables
-$vCenterServer = "vcsa.lab.local"             # Replace with your vCenter Server
-$nfsServerBase = "rocts01nfs01.lab.local"     # Replace with your NFS server
-$nfsPath = "/nfs/isos"                        # Replace with your NFS path
+$vCenterServer = "your-vcenter-server.domain" # Replace with your vCenter Server
+$nfsServerBase = "nfs-hostname.domain"        # Replace with your NFS server
+$nfsPath = "/nfs/iso"                         # Replace with your NFS path
 
 # Connect to vCenter
 Connect-VIServer -Server $vCenterServer 
